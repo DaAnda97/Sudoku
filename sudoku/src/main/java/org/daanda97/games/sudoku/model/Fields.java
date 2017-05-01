@@ -21,7 +21,7 @@ public class Fields {
 		} else {
 			throw new InvalidSize();
 		}
-		
 	}
+	
 	
 }

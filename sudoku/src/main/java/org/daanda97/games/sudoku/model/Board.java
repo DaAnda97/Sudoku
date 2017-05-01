@@ -8,7 +8,9 @@ public class Board {
 	}
 
 	private Fields generateFields() {
-		
+		for (int i = 1; i <= 81; i++){
+			
+		}
 		
 		return null;
 		

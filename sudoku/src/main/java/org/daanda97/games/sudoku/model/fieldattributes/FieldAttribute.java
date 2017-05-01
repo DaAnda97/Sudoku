@@ -15,6 +15,9 @@ public abstract class FieldAttribute {
 		} else {
 			throw new InvalidNumber();
 		}
-		
+	}
+	
+	public int getValue(){
+		return value;
 	}
 }
