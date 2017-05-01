@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.daanda97.games.sudoku.exceptions.InvalidSize;
 
-/*
+/**
  * This class contains all Field objects of the Board
  */
 public class Fields {

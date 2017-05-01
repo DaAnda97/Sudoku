@@ -2,10 +2,14 @@ package org.daanda97.games.sudoku.model.fieldattributes;
 
 import org.daanda97.games.sudoku.exceptions.InvalidNumber;
 
-public abstract class FieldAttribute {
+/**
+ * A FieldAtrribute wraps the Column, the Row and the Box to ensure the value range from 1 to 9
+ *
+ */
+public abstract class FieldNumbers {
 	private int value;
 	
-	public FieldAttribute(int value) throws InvalidNumber {
+	public FieldNumbers(int value) throws InvalidNumber {
 		setValue(value);
 	}
 
