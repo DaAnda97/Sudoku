@@ -20,8 +20,4 @@ public class BoardSize {
 		}
 		
 	}
-	
-	public int getBoardSize(){
-		return boardSize;
-	}
 }
