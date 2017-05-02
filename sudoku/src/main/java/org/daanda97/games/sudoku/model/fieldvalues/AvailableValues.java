@@ -15,7 +15,6 @@ public class AvailableValues {
 	public AvailableValues() {
 		for (int i = 0; i < availableValues.length; i++) {
 			availableValues[i] = true;
-			System.out.println(i + ": true");
 		}
 	}
 

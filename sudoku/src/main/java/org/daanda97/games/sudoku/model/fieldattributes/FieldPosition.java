@@ -31,8 +31,13 @@ public class FieldPosition {
 	 * the subtraction of the column length and value of the row
 	 */
 	public static int getFieldNumber (RowNumber rowNumber, ColumnNumber columnNumber){
-		int fieldnumber = columnNumber.getValue() * 9 - (9 - rowNumber.getValue());
+		int fieldnumber = rowNumber.getValue() * 9 - (9 - columnNumber.getValue());
 		return fieldnumber;
+	}
+	
+	@Override
+	public String toString() {
+		return "(" + columnNumber.getValue() + "," + rowNumber.getValue() + ")";
 	}
 
 }

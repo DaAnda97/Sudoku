@@ -27,26 +27,28 @@ public class Fields {
 		Field[] generatedFields = new Field[81];
 
 		for (int i = 1; i <= 9; i++) {
-			ColumnNumber col = new ColumnNumber(i);
+			RowNumber row = new RowNumber(i);
 			for (int e = 1; e <= 9; e++) {
-				RowNumber row = new RowNumber(e);
+				ColumnNumber col = new ColumnNumber(e);
 				FieldPosition fieldPosition = new FieldPosition(row, col);
 				PositionAttributes positionAttributes = new PositionAttributes(fieldPosition);
 				generatedFields[i + (e - 1) * 9] = new Field(positionAttributes);
+				
+				System.out.print(positionAttributes.toString() + " ");
 			}
+			System.out.println();
 		}
-
 		return generatedFields;
 	}
 
 
-//	public static void main(String[] args) {
-//		try {
-//			Fields fields = new Fields();
-//		} catch (InvalidNumber e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//	}
+	public static void main(String[] args) {
+		try {
+			Fields fields = new Fields();
+		} catch (InvalidNumber e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
 }

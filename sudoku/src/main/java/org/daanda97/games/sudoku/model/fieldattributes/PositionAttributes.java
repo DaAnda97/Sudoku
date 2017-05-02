@@ -9,11 +9,15 @@ import org.daanda97.games.sudoku.exceptions.InvalidNumber;
 public class PositionAttributes {
 	FieldPosition fieldPosition;
 	BoxNumber boxNumber;
-	
+
 	public PositionAttributes(FieldPosition fieldPosition) throws InvalidNumber {
 		this.fieldPosition = fieldPosition;
 		boxNumber = new BoxNumber(BoxNumber.getBoxNumber(fieldPosition));
 	}
 
-	
+	@Override
+	public String toString() {
+		return fieldPosition.getFieldNumber() + fieldPosition.toString();
+	}
+
 }
