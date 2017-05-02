@@ -1,5 +1,7 @@
 package org.daanda97.games.sudoku.model.fieldattributes;
 
+import org.daanda97.games.sudoku.exceptions.InvalidNumber;
+
 /**
  * This class maintains FieldPosition and BoxNumber
  *
@@ -8,13 +10,10 @@ public class PositionAttributes {
 	FieldPosition fieldPosition;
 	BoxNumber boxNumber;
 	
-	public PositionAttributes(FieldPosition fieldPosition, BoxNumber boxNumber) {
-		setAttributes(fieldPosition, boxNumber);
+	public PositionAttributes(FieldPosition fieldPosition) throws InvalidNumber {
+		this.fieldPosition = fieldPosition;
+		boxNumber = new BoxNumber(BoxNumber.getBoxNumber(fieldPosition));
 	}
 
-	private void setAttributes(FieldPosition fieldPosition, BoxNumber boxNumber) {
-		// TODO Is that combination possible?
-		this.fieldPosition = fieldPosition;
-		this.boxNumber = boxNumber;
-	}
+	
 }
