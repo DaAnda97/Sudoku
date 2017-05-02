@@ -32,9 +32,9 @@ public class Fields {
 				ColumnNumber col = new ColumnNumber(e);
 				FieldPosition fieldPosition = new FieldPosition(row, col);
 				PositionAttributes positionAttributes = new PositionAttributes(fieldPosition);
-				generatedFields[i + (e - 1) * 9] = new Field(positionAttributes);
+				generatedFields[(i - 1) + (e - 1) * 9] = new Field(positionAttributes);
 				
-				System.out.print(positionAttributes.toString() + " ");
+				System.out.print(((i == 1) ? " " : "") + positionAttributes.toString() + " ");
 			}
 			System.out.println();
 		}

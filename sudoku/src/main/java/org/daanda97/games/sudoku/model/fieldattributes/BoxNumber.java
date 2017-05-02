@@ -61,7 +61,8 @@ public class BoxNumber extends FieldNumbers {
 		// Number between 1 and 81
 		int fieldNumber = fieldPosition.getFieldNumber();
 		// The first 27 belong to section 1, the next to 2 and the last one to 3
-		int verticalBoxSecion = (int) (fieldNumber / 27) + 1;
+		// Including 27 --> 27 / 27 = 1, but should be 0 --> fieldNumber - 1
+		int verticalBoxSecion = (int) ((fieldNumber-1) / 27) + 1;
 		return verticalBoxSecion;
 	}
 }

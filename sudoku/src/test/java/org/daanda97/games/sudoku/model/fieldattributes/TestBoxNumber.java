@@ -17,7 +17,7 @@ public class TestBoxNumber {
 		try {
 			fieldPosition1 = new FieldPosition(new RowNumber(4), new  ColumnNumber(3));
 			fieldPosition2 = new FieldPosition(new RowNumber(9), new  ColumnNumber(6));
-			fieldPosition3 = new FieldPosition(new RowNumber(7), new  ColumnNumber(7));
+			fieldPosition3 = new FieldPosition(new RowNumber(9), new  ColumnNumber(9));
 		} catch (InvalidNumber e) {
 			e.printStackTrace();
 		}
