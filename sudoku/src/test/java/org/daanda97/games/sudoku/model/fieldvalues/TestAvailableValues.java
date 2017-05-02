@@ -24,6 +24,11 @@ public class TestAvailableValues {
 			}
 		}
 		ArrayList<OwnValue> ownValues = availableValues.getAvailableValues();
-		assertEquals(expectedValues, ownValues);	
+		
+		for (int i = 0; i < ownValues.size(); i++) {
+			assertEquals(expectedValues.get(i).getOwnValue(), ownValues.get(i).getOwnValue());
+		}
 	}
+	
+	
 }
