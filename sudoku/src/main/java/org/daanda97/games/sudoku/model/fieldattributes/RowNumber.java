@@ -10,5 +10,13 @@ public class RowNumber extends FieldNumbers{
 	public RowNumber(int rowNumber) throws InvalidNumber {
 		super(rowNumber);
 	}
+	
+//	public void add(ColumnNumber column) {
+//		column.add(value);
+//	}
+//	public void add(int row)
+//	{
+//		int result = value + row;
+//	}
 
 }

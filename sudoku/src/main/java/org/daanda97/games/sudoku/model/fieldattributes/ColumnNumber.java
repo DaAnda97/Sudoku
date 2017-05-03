@@ -10,4 +10,12 @@ public class ColumnNumber extends FieldNumbers {
 	public ColumnNumber(int column) throws InvalidNumber {
 		super(column);
 	}
+	
+//	public void add(RowNumber row) {
+//		row.add(value);
+//	}
+//	public void add(int row)
+//	{
+//		int result = value + row;
+//	}
 }

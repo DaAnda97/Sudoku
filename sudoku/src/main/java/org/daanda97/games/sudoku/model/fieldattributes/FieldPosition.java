@@ -35,6 +35,12 @@ public class FieldPosition {
 		return fieldnumber;
 	}
 	
+//	public void FieldNumber (RowNumber rowNumber,ColumnNumber columnNumber)
+//	{
+//		RowNumber.add(columnNumber);
+//		Result is in RowNumber
+//	}
+	
 	@Override
 	public String toString() {
 		return "(" + columnNumber.getValue() + "," + rowNumber.getValue() + ")";
