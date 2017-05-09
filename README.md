@@ -12,6 +12,7 @@ The FieldValues know its number, which is set in this field and also its possibl
 
 The PositionAttributes manage its number on the board, its column, its row and its 3*3 box:
 
+| HEADER | HEADER | HEADER | HEADER | HEADER | HEADER | HEADER | HEADER | HEADER | <br/>
 | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | <br/>
 |  1(1,1)[1] |  2(2,1)[1] |  3(3,1)[1] |  4(4,1)[2] |  5(5,1)[2] |  6(6,1)[2] |  7(7,1)[3] |  8(8,1)[3] |  9(9,1)[3] | <br/>
 | 10(1,2)[1] | 11(2,2)[1] | 12(3,2)[1] | 13(4,2)[2] | 14(5,2)[2] | 15(6,2)[2] | 16(7,2)[3] | 17(8,2)[3] | 18(9,2)[3] | <br/>
