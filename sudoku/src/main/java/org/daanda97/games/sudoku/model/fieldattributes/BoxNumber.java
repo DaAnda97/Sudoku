@@ -5,7 +5,7 @@ import org.daanda97.games.sudoku.exceptions.InvalidNumber;
 /**
  * The 3*3 box my field is in
  */
-public class BoxNumber extends FieldNumbers {
+public class BoxNumber extends FieldNumber {
 
 	public BoxNumber(int boxNumber) throws InvalidNumber {
 		super(boxNumber);
