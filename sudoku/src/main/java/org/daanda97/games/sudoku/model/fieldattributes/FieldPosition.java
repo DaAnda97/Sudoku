@@ -19,7 +19,7 @@ public class FieldPosition {
 	/**
 	 * The fields on the board are numbered from 1 to 81. Field 1 is the cross
 	 * of column 1 and row 1. <br>
-	 * f.ex.: Field 56 is in column 2 row 7
+	 * e.g.: Field 56 is in column 2 row 7
 	 * 
 	 * @return fieldnumber
 	 */
