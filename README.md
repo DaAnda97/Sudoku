@@ -1,3 +1,14 @@
+### Table of Contents
+1.  [Sudoku](sudoku) </br>
+  1.1 [Goal](goal) </br>
+  1.2 [Architecture](architecture) </br>
+
+</br>
+</br>
+</br>
+</br>
+</br>
+
 # Sudoku
 Just a little project for training my programming skills
 
