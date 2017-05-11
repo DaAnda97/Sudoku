@@ -9,13 +9,13 @@
 </br>
 </br>
 
-# Sudoku
+# Sudoku <a name="sudoku"></a>
 Just a little project for training my programming skills
 
-## Goal
+## Goal <a name="goal"></a>
 The goal is to have a running SodokuSolver, which follows the rules of the [Object Calisthenics]( https://www.cs.helsinki.fi/u/luontola/tdd-2009/ext/ObjectCalisthenics.pdf ).
 
-## Architecture
+## Architecture <a name="architecture"></a>
 
 The 81 fields are represented in the Fields Object, which maintain its FieldValues and its PositionAttributes.
 
