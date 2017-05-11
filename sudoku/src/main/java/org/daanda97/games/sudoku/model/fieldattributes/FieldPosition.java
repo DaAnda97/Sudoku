@@ -15,35 +15,20 @@ public class FieldPosition {
 	public int getFieldNumber() {
 		return getFieldNumber(this.rowNumber, this.columnNumber);
 	}
-	
+
 	/**
-	 * The fields on the board are numbered from 1 to 81. Field 1 is the cross
-	 * of column 1 and row 1. <br>
-	 * e.g.: Field 56 is in column 2 row 7
 	 * 
-	 * @return fieldnumber
-	 */
-	/*
-	 * Calculation: f.ex.: Field 56 is in column 2 row 7
-	 * (54 = 2 * 9 - (9 - 7)) <br>
-	 * 
-	 * The minuend represents the the last field of the row and gets reduced by
-	 * the subtraction of the column length and value of the row
+	 * @param RowNumber: The number of the fields row
+	 * @param ColumnNumber: The number of the fields column
+	 * @return Integer value of the field
 	 */
 	public static int getFieldNumber (RowNumber rowNumber, ColumnNumber columnNumber){
-		int fieldnumber = rowNumber.getValue() * 9 - (9 - columnNumber.getValue());
-		return fieldnumber;
+		return FieldNumber.getFieldNumber(rowNumber, columnNumber);
 	}
-	
-//	public void FieldNumber (RowNumber rowNumber,ColumnNumber columnNumber)
-//	{
-//		RowNumber.add(columnNumber);
-//		Result is in RowNumber
-//	}
 	
 	@Override
 	public String toString() {
-		return "(" + columnNumber.getValue() + "," + rowNumber.getValue() + ")";
+		return "(" + columnNumber.toString() + "," + rowNumber.toString() + ")";
 	}
 
 }

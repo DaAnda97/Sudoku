@@ -21,15 +21,38 @@ public abstract class FieldNumber {
 		}
 	}
 	
-	public int getValue(){
+	private int getValue(){
 		return value;
 	}
 	
-	public int getFieldNumber (BoxNumber boxNumber, ColumnNumber columnNumber){
-		return calculateFieldNumber(boxNumber, columnNumber);
+	/**
+	 * The fields on the board are numbered from 1 to 81. Field 1 is the cross
+	 * of column 1 and row 1. <br>
+	 * e.g.: Field 56 is in column 2 row 7
+	 * 
+	 * @param RowNumber: The number of the fields row
+	 * @param ColumnNumber: The number of the fields column
+	 * @return Integer value of the field
+	 */
+	public static int getFieldNumber (RowNumber rowNumber, ColumnNumber columnNumber){
+		return calculateFieldNumber(rowNumber, columnNumber);
 	}
-	private int calculateFieldNumber (FieldNumber boxNumber, FieldNumber columnNumber){
-		return boxNumber.value + columnNumber.value;
+	
+	/**
+	 * Calculation: f.ex.: Field 56 is in column 2 row 7
+	 * (54 = 2 * 9 - (9 - 7)) <br>
+	 * 
+	 * The minuend represents the the last field of the row and gets reduced by
+	 * the subtraction of the column length and value of the row
+	 */
+	private static int calculateFieldNumber (FieldNumber rowNumber, FieldNumber columnNumber){
+		int fieldnumber = rowNumber.getValue() * 9 - (9 - columnNumber.getValue());
+		return fieldnumber;
+	}
+	
+	@Override
+	public String toString() {
+		return this.getValue() + "";
 	}
 	
 }

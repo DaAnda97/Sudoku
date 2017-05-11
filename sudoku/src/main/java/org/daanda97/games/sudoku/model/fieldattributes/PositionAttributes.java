@@ -17,7 +17,7 @@ public class PositionAttributes {
 
 	@Override
 	public String toString() {
-		return fieldPosition.getFieldNumber() + fieldPosition.toString() + "[" + boxNumber.getValue() + "]";
+		return fieldPosition.getFieldNumber() + fieldPosition.toString() + "[" + boxNumber.toString() + "]";
 	}
 
 }

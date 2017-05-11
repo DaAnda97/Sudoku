@@ -11,11 +11,4 @@ public class ColumnNumber extends FieldNumber {
 		super(column);
 	}
 	
-//	public void add(RowNumber row) {
-//		row.add(value);
-//	}
-//	public void add(int row)
-//	{
-//		int result = value + row;
-//	}
 }
