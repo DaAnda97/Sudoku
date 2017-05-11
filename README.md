@@ -1,21 +1,10 @@
-### Table of Contents
-1.  [Sudoku](sudoku) </br>
-  1.1 [Goal](goal) </br>
-  1.2 [Architecture](architecture) </br>
-
-</br>
-</br>
-</br>
-</br>
-</br>
-
-# Sudoku <a name="sudoku"></a>
+# Sudoku
 Just a little project for training my programming skills
 
-## Goal <a name="goal"></a>
+## Goal
 The goal is to have a running SodokuSolver, which follows the rules of the [Object Calisthenics]( https://www.cs.helsinki.fi/u/luontola/tdd-2009/ext/ObjectCalisthenics.pdf ).
 
-## Architecture <a name="architecture"></a>
+## Architecture
 
 The 81 fields are represented in the Fields Object, which maintain its FieldValues and its PositionAttributes.
 
