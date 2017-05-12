@@ -23,7 +23,7 @@ public class Fields {
 	 *         Field[23]
 	 * @throws InvalidNumber
 	 */
-	public Field[] generateEmthyFields() throws InvalidNumber {
+	private Field[] generateEmthyFields() throws InvalidNumber {
 		Field[] generatedFields = new Field[81];
 
 		for (int i = 1; i <= 9; i++) {

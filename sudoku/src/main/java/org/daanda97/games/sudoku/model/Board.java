@@ -1,18 +1,13 @@
 package org.daanda97.games.sudoku.model;
 
+import org.daanda97.games.sudoku.exceptions.InvalidNumber;
+
 public class Board {
 	Fields fields;
 	
-	public Board() {
-		this.fields = generateFields();
+	public Board() throws InvalidNumber {
+		this.fields = new Fields();
 	}
 
-	private Fields generateFields() {
-		for (int i = 1; i <= 81; i++){
-			
-		}
-		
-		return null;
-		
-	}
+
 }
