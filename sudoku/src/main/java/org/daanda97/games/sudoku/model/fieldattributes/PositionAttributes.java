@@ -7,8 +7,8 @@ import org.daanda97.games.sudoku.exceptions.InvalidNumber;
  *
  */
 public class PositionAttributes {
-	FieldPosition fieldPosition;
-	BoxNumber boxNumber;
+	private FieldPosition fieldPosition;
+	private BoxNumber boxNumber;
 
 	public PositionAttributes(FieldPosition fieldPosition) throws InvalidNumber {
 		this.fieldPosition = fieldPosition;
@@ -18,6 +18,25 @@ public class PositionAttributes {
 	@Override
 	public String toString() {
 		return fieldPosition.getFieldNumber() + fieldPosition.toString() + "[" + boxNumber.toString() + "]";
+	}
+	
+	public boolean containsRowBoxOrColumn(PositionAttributes positionAttributes){
+		if(positionAttributes.equalsBoxNumber(this.boxNumber)){
+			return true;
+		}
+		if (positionAttributes.containsRowOrColumn(this.fieldPosition)){
+			return true;
+		}
+		return false;
+		
+	}
+	
+	private boolean containsRowOrColumn(FieldPosition fieldPosition) {
+		return this.fieldPosition.containsRowOrColumn(fieldPosition);
+	}
+
+	private boolean equalsBoxNumber(BoxNumber boxNumber){
+		return this.boxNumber.equals(boxNumber);
 	}
 
 }

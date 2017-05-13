@@ -31,4 +31,22 @@ public class FieldPosition {
 		return "(" + columnNumber.toString() + "," + rowNumber.toString() + ")";
 	}
 
+	protected boolean containsRowOrColumn(FieldPosition fieldPosition) {
+		if(fieldPosition.equalsRow(this.rowNumber)){
+			return true;
+		}
+		if(fieldPosition.equalsColumn(this.columnNumber)){
+			return true;
+		}
+		return false;
+	}
+
+	private boolean equalsRow(RowNumber rowNumber) {
+		return this.rowNumber.equals(rowNumber);
+	}
+
+	private boolean equalsColumn(ColumnNumber columnNumber) {
+		return this.columnNumber.equals(columnNumber);
+	}
+
 }
