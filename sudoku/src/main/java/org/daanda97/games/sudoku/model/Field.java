@@ -1,8 +1,7 @@
 package org.daanda97.games.sudoku.model;
 
 import org.daanda97.games.sudoku.model.fieldattributes.PositionAttributes;
-import org.daanda97.games.sudoku.model.fieldvalues.FieldValues;
-import org.daanda97.games.sudoku.model.fieldvalues.OwnValue;
+import org.daanda97.games.sudoku.model.fieldvalues.FieldValueManager;
 
 /**
  * This class represents one Field on the Board
@@ -10,10 +9,10 @@ import org.daanda97.games.sudoku.model.fieldvalues.OwnValue;
  */
 public class Field {
 	PositionAttributes positionAttributes;
-	FieldValues fieldValues;
+	FieldValueManager fieldValues;
 	
 	public Field(PositionAttributes positionAttributes) {
 		this.positionAttributes = positionAttributes;
-		this.fieldValues = new FieldValues(new OwnValue());
+		this.fieldValues = new FieldValueManager();
 	}
 }
