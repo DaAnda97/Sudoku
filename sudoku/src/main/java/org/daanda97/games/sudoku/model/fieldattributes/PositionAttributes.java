@@ -20,7 +20,7 @@ public class PositionAttributes {
 		return fieldPosition.getFieldNumber() + fieldPosition.toString() + "[" + boxNumber.toString() + "]";
 	}
 	
-	public boolean containsRowBoxOrColumn(PositionAttributes positionAttributes){
+	public boolean containsRowColumnOrBox(PositionAttributes positionAttributes){
 		if(positionAttributes.equalsBoxNumber(this.boxNumber)){
 			return true;
 		}

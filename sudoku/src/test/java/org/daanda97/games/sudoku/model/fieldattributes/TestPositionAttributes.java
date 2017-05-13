@@ -35,9 +35,9 @@ public class TestPositionAttributes {
 	
 	@Test
 	public void testContainsRowColumnOrBox(){
-		assertEquals(true, positionAttributes.containsRowBoxOrColumn(positionSameColumn));
-		assertEquals(true, positionAttributes.containsRowBoxOrColumn(positionSameRow));
-		assertEquals(true, positionAttributes.containsRowBoxOrColumn(positionSameBox));
-		assertEquals(false, positionAttributes.containsRowBoxOrColumn(positionNothingSame));
+		assertEquals(true, positionAttributes.containsRowColumnOrBox(positionSameColumn));
+		assertEquals(true, positionAttributes.containsRowColumnOrBox(positionSameRow));
+		assertEquals(true, positionAttributes.containsRowColumnOrBox(positionSameBox));
+		assertEquals(false, positionAttributes.containsRowColumnOrBox(positionNothingSame));
 	}
 }

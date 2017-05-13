@@ -22,8 +22,16 @@ public class FieldValueManager {
 		// TODO throw internalErrorException
 	}
 
-	public void excludeValue(FieldValue valueToExclude) {
-		availableValues.excludeValue(valueToExclude);
+	public void excludeValue(FieldValueManager changedValue) {
+		excludeChangedValue(this.availableValues);
 	}
+
+	private void excludeChangedValue(AvailableValues ownFieldValueManager) {
+		ownFieldValueManager.excludeValue(this.ownValue); 
+		// this.ownValue is the OwnVlaue of changedField
+		
+	}
+	
+	
 
 }

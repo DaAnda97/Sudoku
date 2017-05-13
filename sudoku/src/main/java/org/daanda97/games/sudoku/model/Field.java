@@ -8,11 +8,33 @@ import org.daanda97.games.sudoku.model.fieldvalues.FieldValueManager;
  *
  */
 public class Field {
-	PositionAttributes positionAttributes;
-	FieldValueManager fieldValues;
-	
+	private PositionAttributes positionAttributes;
+	private FieldValueManager fieldValueManager;
+
 	public Field(PositionAttributes positionAttributes) {
 		this.positionAttributes = positionAttributes;
-		this.fieldValues = new FieldValueManager();
+		this.fieldValueManager = new FieldValueManager();
+	}
+
+	public void excludeFieldValueIfAffaced(Field changedField) {
+		if (changedField.isContainedBy(this.positionAttributes)) {
+			changedField.excludeValueOfChangedField(fieldValueManager);
+		}
+	}
+
+	private void excludeValueOfChangedField(FieldValueManager ownFieldValues) {
+		ownFieldValues.excludeValue(this.fieldValueManager);
+		// this.fieldValueManager is the FieldValueManager of changedField
+	}
+
+	/**
+	 * 
+	 * @param ownPositionAttributed
+	 * @return ture, if the ownPositionAttributes contains minimum the same Row,
+	 *         Column or Box
+	 */
+	private boolean isContainedBy(PositionAttributes ownPositionAttributed) {
+		return ownPositionAttributed.containsRowColumnOrBox(this.positionAttributes);
+		// this.positionAttribues are the PositionAttributes of changedField
 	}
 }
