@@ -8,22 +8,26 @@ import org.junit.Test;
 
 public class TestPositionAttributes {
 	PositionAttributes positionAttributes;
-	PositionAttributes positionAttributes2;
-	PositionAttributes positionAttributes3;
-	PositionAttributes positionAttributes4;
+	PositionAttributes positionSameColumn;
+	PositionAttributes positionSameRow;
+	PositionAttributes positionSameBox;
+	PositionAttributes positionNothingSame;
 	
 	@Before
 	public void initialize(){
 		try {
 			FieldPosition fieldPosition = new FieldPosition(new RowNumber(3), new ColumnNumber(5));
-			FieldPosition fieldPosition2 = new FieldPosition(new RowNumber(7), new ColumnNumber(5)); //same column
-			FieldPosition fieldPosition3 = new FieldPosition(new RowNumber(3), new ColumnNumber(1)); //same row
-			FieldPosition fieldPosition4 = new FieldPosition(new RowNumber(2), new ColumnNumber(4)); //same box
+			FieldPosition sameColumn = new FieldPosition(new RowNumber(7), new ColumnNumber(5)); 
+			FieldPosition sameRow = new FieldPosition(new RowNumber(3), new ColumnNumber(1)); 
+			FieldPosition sameBox = new FieldPosition(new RowNumber(2), new ColumnNumber(4));
+			FieldPosition nothingSame = new FieldPosition(new RowNumber(9), new ColumnNumber(9));
 			
 			positionAttributes = new PositionAttributes(fieldPosition);
-			positionAttributes2 = new PositionAttributes(fieldPosition2);
-			positionAttributes3 = new PositionAttributes(fieldPosition3);
-			positionAttributes4 = new PositionAttributes(fieldPosition4);
+			positionSameColumn = new PositionAttributes(sameColumn);
+			positionSameRow = new PositionAttributes(sameRow);
+			positionSameBox = new PositionAttributes(sameBox);
+			positionNothingSame = new PositionAttributes(nothingSame);
+			
 		} catch (InvalidNumber e) {
 			e.printStackTrace();
 		}
@@ -31,8 +35,9 @@ public class TestPositionAttributes {
 	
 	@Test
 	public void testContainsRowColumnOrBox(){
-		assertEquals(true, positionAttributes.containsRowBoxOrColumn(positionAttributes2));
-		assertEquals(true, positionAttributes.containsRowBoxOrColumn(positionAttributes3));
-		assertEquals(true, positionAttributes.containsRowBoxOrColumn(positionAttributes4));
+		assertEquals(true, positionAttributes.containsRowBoxOrColumn(positionSameColumn));
+		assertEquals(true, positionAttributes.containsRowBoxOrColumn(positionSameRow));
+		assertEquals(true, positionAttributes.containsRowBoxOrColumn(positionSameBox));
+		assertEquals(false, positionAttributes.containsRowBoxOrColumn(positionNothingSame));
 	}
 }
