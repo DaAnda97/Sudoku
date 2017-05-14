@@ -1,5 +1,8 @@
 package org.daanda97.games.sudoku.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.daanda97.games.sudoku.exceptions.InvalidNumber;
 import org.daanda97.games.sudoku.model.fieldattributes.ColumnNumber;
 import org.daanda97.games.sudoku.model.fieldattributes.FieldPosition;
@@ -10,7 +13,7 @@ import org.daanda97.games.sudoku.model.fieldattributes.RowNumber;
  * This class contains all Field objects of the Board
  */
 public class Fields {
-	private Field[] fields;
+	private List<Field> fields;
 
 	public Fields() throws InvalidNumber {
 		fields = generateEmthyFields();
@@ -23,8 +26,8 @@ public class Fields {
 	 *         Field[23]
 	 * @throws InvalidNumber
 	 */
-	private Field[] generateEmthyFields() throws InvalidNumber {
-		Field[] generatedFields = new Field[81];
+	private List<Field> generateEmthyFields() throws InvalidNumber {
+		ArrayList<Field> generatedFields = new ArrayList<Field>();
 
 		for (int i = 1; i <= 9; i++) {
 			RowNumber row = new RowNumber(i);
@@ -32,7 +35,7 @@ public class Fields {
 				ColumnNumber col = new ColumnNumber(e);
 				FieldPosition fieldPosition = new FieldPosition(row, col);
 				PositionAttributes positionAttributes = new PositionAttributes(fieldPosition);
-				generatedFields[(i - 1) + (e - 1) * 9] = new Field(positionAttributes);
+				generatedFields.add(new Field(positionAttributes));
 				
 				System.out.print(((i == 1) ? " " : "") + positionAttributes.toString() + " ");
 			}
