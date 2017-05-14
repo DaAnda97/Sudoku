@@ -28,7 +28,7 @@ public class Fields {
 	 */
 	private List<Field> generateEmthyFields() throws InvalidNumber {
 		ArrayList<Field> generatedFields = new ArrayList<Field>();
-
+		System.out.println("Generated Fields: FieldNumber (column,row) [box]");
 		for (int i = 1; i <= 9; i++) {
 			RowNumber row = new RowNumber(i);
 			for (int e = 1; e <= 9; e++) {

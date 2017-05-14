@@ -26,11 +26,6 @@ public class FieldPosition {
 		return FieldNumber.getFieldNumber(rowNumber, columnNumber);
 	}
 	
-	@Override
-	public String toString() {
-		return "(" + columnNumber.toString() + "," + rowNumber.toString() + ")";
-	}
-
 	protected boolean containsRowOrColumn(FieldPosition fieldPosition) {
 		if(fieldPosition.equalsRow(this.rowNumber)){
 			return true;
@@ -49,4 +44,8 @@ public class FieldPosition {
 		return this.columnNumber.equals(columnNumber);
 	}
 
+	@Override
+	public String toString() {
+		return "(" + columnNumber.toString() + "," + rowNumber.toString() + ")";
+	}
 }
