@@ -16,6 +16,12 @@ public class Field {
 		this.fieldValueManager = new FieldValueManager();
 	}
 
+	/**
+	 * Excludes the changedFields ownValue, if this field equals with minimum
+	 * one of row, column or box
+	 * 
+	 * @param changedField
+	 */
 	public void excludeFieldValueIfAffaced(Field changedField) {
 		if (changedField.isContainedBy(this.positionAttributes)) {
 			changedField.excludeValueOfChangedField(fieldValueManager);

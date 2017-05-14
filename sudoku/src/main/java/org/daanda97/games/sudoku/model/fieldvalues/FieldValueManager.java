@@ -29,7 +29,6 @@ public class FieldValueManager {
 	private void excludeChangedValue(AvailableValues ownFieldValueManager) {
 		ownFieldValueManager.excludeValue(this.ownValue); 
 		// this.ownValue is the OwnVlaue of changedField
-		
 	}
 	
 	
