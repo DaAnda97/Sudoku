@@ -10,7 +10,7 @@ public class FieldCoordinate {
 	}
 
 	/**
-	 * @return fieldnumber of this Object
+	 * @return FieldPosition of this Object
 	 */
 	public int getFieldNumber() {
 		return getFieldNumber(this.rowNumber, this.columnNumber);
