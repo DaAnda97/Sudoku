@@ -9,9 +9,9 @@ public class TestFieldPosition {
 	
 	@Test
 	public void testGetFieldNumber(){
-		FieldPosition fieldPos = null;
+		FieldCoordinate fieldPos = null;
 		try {
-			fieldPos = new FieldPosition(new RowNumber(7), new ColumnNumber(2));
+			fieldPos = new FieldCoordinate(new RowNumber(7), new ColumnNumber(2));
 		} catch (InvalidNumber e) {
 			System.out.println("TEST FAILED: " + e.getMessage());
 		}

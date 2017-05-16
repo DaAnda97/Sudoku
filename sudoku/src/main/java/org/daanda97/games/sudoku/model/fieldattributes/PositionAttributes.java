@@ -7,10 +7,10 @@ import org.daanda97.games.sudoku.exceptions.InvalidNumber;
  *
  */
 public class PositionAttributes {
-	private FieldPosition fieldPosition;
+	private FieldCoordinate fieldPosition;
 	private BoxNumber boxNumber;
 
-	public PositionAttributes(FieldPosition fieldPosition) throws InvalidNumber {
+	public PositionAttributes(FieldCoordinate fieldPosition) throws InvalidNumber {
 		this.fieldPosition = fieldPosition;
 		boxNumber = new BoxNumber(BoxNumber.getBoxNumber(fieldPosition));
 	}
@@ -31,7 +31,7 @@ public class PositionAttributes {
 		
 	}
 	
-	private boolean containsRowOrColumn(FieldPosition fieldPosition) {
+	private boolean containsRowOrColumn(FieldCoordinate fieldPosition) {
 		return this.fieldPosition.containsRowOrColumn(fieldPosition);
 	}
 

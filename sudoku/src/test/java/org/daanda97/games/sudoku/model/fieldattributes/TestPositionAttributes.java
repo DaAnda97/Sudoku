@@ -16,11 +16,11 @@ public class TestPositionAttributes {
 	@Before
 	public void initialize(){
 		try {
-			FieldPosition fieldPosition = new FieldPosition(new RowNumber(3), new ColumnNumber(5));
-			FieldPosition sameColumn = new FieldPosition(new RowNumber(7), new ColumnNumber(5)); 
-			FieldPosition sameRow = new FieldPosition(new RowNumber(3), new ColumnNumber(1)); 
-			FieldPosition sameBox = new FieldPosition(new RowNumber(2), new ColumnNumber(4));
-			FieldPosition nothingSame = new FieldPosition(new RowNumber(9), new ColumnNumber(9));
+			FieldCoordinate fieldPosition = new FieldCoordinate(new RowNumber(3), new ColumnNumber(5));
+			FieldCoordinate sameColumn = new FieldCoordinate(new RowNumber(7), new ColumnNumber(5)); 
+			FieldCoordinate sameRow = new FieldCoordinate(new RowNumber(3), new ColumnNumber(1)); 
+			FieldCoordinate sameBox = new FieldCoordinate(new RowNumber(2), new ColumnNumber(4));
+			FieldCoordinate nothingSame = new FieldCoordinate(new RowNumber(9), new ColumnNumber(9));
 			
 			positionAttributes = new PositionAttributes(fieldPosition);
 			positionSameColumn = new PositionAttributes(sameColumn);

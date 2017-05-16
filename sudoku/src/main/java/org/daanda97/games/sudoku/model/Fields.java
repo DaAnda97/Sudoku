@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.daanda97.games.sudoku.exceptions.InvalidNumber;
 import org.daanda97.games.sudoku.model.fieldattributes.ColumnNumber;
-import org.daanda97.games.sudoku.model.fieldattributes.FieldPosition;
+import org.daanda97.games.sudoku.model.fieldattributes.FieldCoordinate;
 import org.daanda97.games.sudoku.model.fieldattributes.PositionAttributes;
 import org.daanda97.games.sudoku.model.fieldattributes.RowNumber;
 
@@ -33,7 +33,7 @@ public class Fields {
 			RowNumber row = new RowNumber(i);
 			for (int e = 1; e <= 9; e++) {
 				ColumnNumber col = new ColumnNumber(e);
-				FieldPosition fieldPosition = new FieldPosition(row, col);
+				FieldCoordinate fieldPosition = new FieldCoordinate(row, col);
 				PositionAttributes positionAttributes = new PositionAttributes(fieldPosition);
 				generatedFields.add(new Field(positionAttributes));
 				

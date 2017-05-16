@@ -17,7 +17,7 @@ public class BoxNumber extends FieldNumber {
 	 * @return boxNumber; a number between 1 and 9, which represents one of the
 	 *         9 3*3 fields
 	 */
-	public static int getBoxNumber(FieldPosition fieldPosition) {
+	public static int getBoxNumber(FieldCoordinate fieldPosition) {
 		int horizontalBoxSection = calculateHorizontalBoxSection(fieldPosition);
 		int verticalBoxSection = calculateVerticalBoxSection(fieldPosition);
 		int boxNumber = horizontalBoxSection + ((verticalBoxSection - 1) * 3);
@@ -32,7 +32,7 @@ public class BoxNumber extends FieldNumber {
 	 *         2 = column{4,5,6}; <br>
 	 *         3 = column{7,8,9}
 	 */
-	private static int calculateHorizontalBoxSection(FieldPosition fieldPosition) {
+	private static int calculateHorizontalBoxSection(FieldCoordinate fieldPosition) {
 		// Number between 1 and 81
 		int fieldNumber = fieldPosition.getFieldNumber();
 		int columnNumber = fieldNumber % 9; // Number between 0 and 8
@@ -57,7 +57,7 @@ public class BoxNumber extends FieldNumber {
 	 *         2 = row{4,5,6}; <br>
 	 *         3 = row{7,8,9}
 	 */
-	private static int calculateVerticalBoxSection(FieldPosition fieldPosition) {
+	private static int calculateVerticalBoxSection(FieldCoordinate fieldPosition) {
 		// Number between 1 and 81
 		int fieldNumber = fieldPosition.getFieldNumber();
 		// The first 27 belong to section 1, the next to 2 and the last one to 3

@@ -8,16 +8,16 @@ import org.junit.Test;
 
 
 public class TestBoxNumber {
-	FieldPosition fieldPosition1 = null;
-	FieldPosition fieldPosition2 = null;
-	FieldPosition fieldPosition3 = null;
+	FieldCoordinate fieldPosition1 = null;
+	FieldCoordinate fieldPosition2 = null;
+	FieldCoordinate fieldPosition3 = null;
 	
 	@Before
 	public void initilize(){
 		try {
-			fieldPosition1 = new FieldPosition(new RowNumber(4), new  ColumnNumber(3));
-			fieldPosition2 = new FieldPosition(new RowNumber(9), new  ColumnNumber(6));
-			fieldPosition3 = new FieldPosition(new RowNumber(9), new  ColumnNumber(9));
+			fieldPosition1 = new FieldCoordinate(new RowNumber(4), new  ColumnNumber(3));
+			fieldPosition2 = new FieldCoordinate(new RowNumber(9), new  ColumnNumber(6));
+			fieldPosition3 = new FieldCoordinate(new RowNumber(9), new  ColumnNumber(9));
 		} catch (InvalidNumber e) {
 			e.printStackTrace();
 		}

@@ -1,10 +1,10 @@
 package org.daanda97.games.sudoku.model.fieldattributes;
 
-public class FieldPosition {
+public class FieldCoordinate {
 	RowNumber rowNumber;
 	ColumnNumber columnNumber;
 
-	public FieldPosition(RowNumber rowNumber, ColumnNumber columnNumber) {
+	public FieldCoordinate(RowNumber rowNumber, ColumnNumber columnNumber) {
 		this.rowNumber = rowNumber;
 		this.columnNumber = columnNumber;
 	}
@@ -26,7 +26,7 @@ public class FieldPosition {
 		return FieldNumber.getFieldNumber(rowNumber, columnNumber);
 	}
 	
-	protected boolean containsRowOrColumn(FieldPosition fieldPosition) {
+	protected boolean containsRowOrColumn(FieldCoordinate fieldPosition) {
 		if(fieldPosition.equalsRow(this.rowNumber)){
 			return true;
 		}
