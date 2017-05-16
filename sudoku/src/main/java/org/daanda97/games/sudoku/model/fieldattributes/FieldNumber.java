@@ -34,7 +34,7 @@ public abstract class FieldNumber {
 	 * @param ColumnNumber: The number of the fields column
 	 * @return Integer value of the field
 	 */
-	public static int getFieldNumber (RowNumber rowNumber, ColumnNumber columnNumber){
+	public static FieldPosition getFieldPosition (RowNumber rowNumber, ColumnNumber columnNumber){
 		return calculateFieldNumber(rowNumber, columnNumber);
 	}
 	
@@ -45,9 +45,10 @@ public abstract class FieldNumber {
 	 * The minuend represents the the last field of the row and gets reduced by
 	 * the subtraction of the column length and value of the row
 	 */
-	private static int calculateFieldNumber (FieldNumber rowNumber, FieldNumber columnNumber){
-		int fieldnumber = rowNumber.getValue() * 9 - (9 - columnNumber.getValue());
-		return fieldnumber;
+	private static FieldPosition calculateFieldNumber (FieldNumber rowNumber, FieldNumber columnNumber){
+		int numberOfFieldPosition = rowNumber.getValue() * 9 - (9 - columnNumber.getValue());
+		FieldPosition fieldPosition = new FieldPosition(numberOfFieldPosition);
+		return fieldPosition;
 	}
 	
 	@Override

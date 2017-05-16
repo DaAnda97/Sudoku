@@ -14,6 +14,10 @@ public class FieldPosition {
 	private void setFieldPosition(int fieldPosition) {
 		this.fieldPosition = fieldPosition;
 	}
+	
+	public int getFieldPosition(){
+		return fieldPosition;
+	}
 
 	@Override
 	public int hashCode() {

@@ -12,7 +12,7 @@ public class FieldCoordinate {
 	/**
 	 * @return FieldPosition of this Object
 	 */
-	public int getFieldNumber() {
+	public FieldPosition getFieldNumber() {
 		return getFieldNumber(this.rowNumber, this.columnNumber);
 	}
 
@@ -22,8 +22,8 @@ public class FieldCoordinate {
 	 * @param ColumnNumber: The number of the fields column
 	 * @return Integer value of the field
 	 */
-	public static int getFieldNumber (RowNumber rowNumber, ColumnNumber columnNumber){
-		return FieldNumber.getFieldNumber(rowNumber, columnNumber);
+	public static FieldPosition getFieldNumber (RowNumber rowNumber, ColumnNumber columnNumber){
+		return FieldNumber.getFieldPosition(rowNumber, columnNumber);
 	}
 	
 	protected boolean containsRowOrColumn(FieldCoordinate fieldPosition) {

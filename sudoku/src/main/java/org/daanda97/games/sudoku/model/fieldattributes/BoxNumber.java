@@ -34,7 +34,7 @@ public class BoxNumber extends FieldNumber {
 	 */
 	private static int calculateHorizontalBoxSection(FieldCoordinate fieldPosition) {
 		// Number between 1 and 81
-		int fieldNumber = fieldPosition.getFieldNumber();
+		int fieldNumber = fieldPosition.getFieldNumber().getFieldPosition();
 		int columnNumber = fieldNumber % 9; // Number between 0 and 8
 		if (columnNumber == 0) { // the result is 0 if the division through 9
 									// has
@@ -59,10 +59,10 @@ public class BoxNumber extends FieldNumber {
 	 */
 	private static int calculateVerticalBoxSection(FieldCoordinate fieldPosition) {
 		// Number between 1 and 81
-		int fieldNumber = fieldPosition.getFieldNumber();
+		int fieldNumber = fieldPosition.getFieldNumber().getFieldPosition();
 		// The first 27 belong to section 1, the next to 2 and the last one to 3
 		// Including 27 --> 27 / 27 = 1, but should be 0 --> fieldNumber - 1
-		int verticalBoxSecion = (int) ((fieldNumber-1) / 27) + 1;
+		int verticalBoxSecion = (int) ((fieldNumber - 1) / 27) + 1;
 		return verticalBoxSecion;
 	}
 }
