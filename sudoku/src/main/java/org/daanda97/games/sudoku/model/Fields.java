@@ -44,14 +44,4 @@ public class Fields {
 		return generatedFields;
 	}
 
-
-	public static void main(String[] args) {
-		try {
-			Fields fields = new Fields();
-		} catch (InvalidNumber e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
 }
