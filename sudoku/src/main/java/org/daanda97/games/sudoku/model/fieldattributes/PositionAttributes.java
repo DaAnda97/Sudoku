@@ -17,7 +17,7 @@ public class PositionAttributes {
 
 	@Override
 	public String toString() {
-		return fieldPosition.getFieldNumber() + fieldPosition.toString() + "[" + boxNumber.toString() + "]";
+		return fieldPosition.getFieldNumber().toString() + fieldPosition.toString() + "[" + boxNumber.toString() + "]";
 	}
 	
 	public boolean containsRowColumnOrBox(PositionAttributes positionAttributes){

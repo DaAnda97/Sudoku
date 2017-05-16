@@ -41,5 +41,8 @@ public class FieldPosition {
 		return true;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return this.getFieldPosition() + "";
+	}
 }
